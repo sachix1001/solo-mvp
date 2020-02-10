@@ -92,7 +92,7 @@ const Ghibli = [
     title: "Only Yesterday",
     content:
       "1991 Isao Takahata Toshio Suzuki Katz Hoshi anime romance drama melodrama coming-of-age fiction",
-    img: "omotitlee6"
+    img: "omoide6"
   },
   {
     title: "Kiki's Delivery Service",
