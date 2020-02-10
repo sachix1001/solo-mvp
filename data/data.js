@@ -126,4 +126,4 @@ const Ghibli = [
   }
 ];
 
-module.exports = { Ghibli };
+module.exports = {Ghibli};

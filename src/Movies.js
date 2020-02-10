@@ -3,27 +3,20 @@ import "./App.css";
 import { setAllMovies, selectMovie, allExceptSelected } from "./redux/redux";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
-import Movies from './Movies'
+import image from './images/1naushika.jpg'
 
-function App() {
+function Movies() {
   const allMovies = useSelector(state => state.allMovies);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    axios.get("/api/movies").then(res => {
-      dispatch(setAllMovies(res.data));
-    });
-  }, [dispatch]);
-
-  useEffect(()=>{
-    console.log('allMovies',allMovies)
-  },[allMovies])
 
   return (
     <div className="App">
-      <Movies></Movies>
+      {allMovies.map(movie=>(
+          <img src={image} key='movie.id'/>
+      ))}
     </div>
   );
 }
 
-export default App;
+export default Movies;
