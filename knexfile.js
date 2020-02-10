@@ -6,7 +6,7 @@ module.exports = {
   client: "pg",
   connection:
     process.env.DATABASE_URL ||
-    `postgres://${process.env.USER}@127.0.0.1:5432/locations`,
+    `postgres://${process.env.USER}@127.0.0.1:5432/movies`,
   searchPath: "public",
   pool: {
     min: 2,
