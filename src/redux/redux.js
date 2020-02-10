@@ -6,7 +6,7 @@ const initialState = {
   allExceptSelected: []
 };
 
-export const allMovies = movies => {
+export const setAllMovies = movies => {
   return {
     type: "SET_MOVIES",
     movies
