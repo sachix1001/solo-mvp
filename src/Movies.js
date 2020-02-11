@@ -64,6 +64,9 @@ function Movies() {
 
   function movieSelected(movie) {
     dispatch(selectMovie(movie));
+    console.log('allMovies',allMovies)
+    console.log('selected',selected)
+    console.log('allExceptSelected',allExceptSelected)
     const exceptSelected = allMovies.filter(elem => elem.id !== movie.id);
     dispatch(setAllExceptSelected(exceptSelected));
   }
