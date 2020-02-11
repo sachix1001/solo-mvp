@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import { useSelector, useDispatch } from "react-redux";
-// import axios from "axios";
+import frame from "./images/どんぐり.png";
 import {
   naushika1,
   rapyuta2,
@@ -105,12 +105,13 @@ function Movies() {
 
   return (
     <div className="App">
-      <h2 id="title">Select Your Favorite Ghibli Movie</h2>
+  
       <div className="container">
         {selected ? (
-          <div className='movie-card'>
-            <div className="ranking">favorite</div>
-            <img className="movieImg" src={image[selected.img]} />
+          <div className='favorite-movie-card'>
+            {/* <img src={frame} className='frame' alt='frame'/> */}
+            <h3 id="title" className='ranking'>Select Your Favorite Movie</h3>
+            <img className="movie-img" id='favorite' src={image[selected.img]} />
           </div>
         ) : null}
         {allExceptSelected.map((movie, i) => {
@@ -118,7 +119,7 @@ function Movies() {
             <div className="movie-card">
               <div className="ranking">{i+1}</div>
               <img
-                className="movieImg"
+                className="movie-img"
                 src={image[movie.img]}
                 key={movie.id}
                 onClick={e => movieSelected(movie)}
