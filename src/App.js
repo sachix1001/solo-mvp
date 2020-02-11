@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { setAllMovies, selectMovie, allExceptSelected } from "./redux/redux";
+import { setAllMovies } from "./redux/redux";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import Movies from './Movies'

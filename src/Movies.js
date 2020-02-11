@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./App.css";
-import { setAllMovies, selectMovie, allExceptSelected } from "./redux/redux";
-import { useSelector, useDispatch } from "react-redux";
-import axios from "axios";
+// import { setAllMovies, selectMovie, allExceptSelected } from "./redux/redux";
+import { useSelector } from "react-redux";
+// import axios from "axios";
 import {
   naushika1,
   rapyuta2,
@@ -29,7 +29,7 @@ import {
 
 function Movies() {
   const allMovies = useSelector(state => state.allMovies);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const image = {
     naushika1,
     rapyuta2,
