@@ -4,10 +4,13 @@ import { setAllMovies } from "./redux/redux";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import Movies from './Movies'
+import data from './data';
 
 function App() {
   const allMovies = useSelector(state => state.allMovies);
   const dispatch = useDispatch();
+  
+  dispatch(setAllMovies(data.Ghibli))
 
   useEffect(() => {
     axios.get("/api/movies").then(res => {

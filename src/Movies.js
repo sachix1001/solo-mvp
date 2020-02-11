@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 // import { setAllMovies, selectMovie, allExceptSelected } from "./redux/redux";
-import { useSelector } from "react-redux";
+import { useSelector , useDispatch} from "react-redux";
 // import axios from "axios";
 import {
   naushika1,
@@ -26,6 +26,7 @@ import {
   kazetachinu20,
   marnie21
 } from "./images/index";
+import { selectMovie, allExceptSelected} from "./redux/redux";
 
 function Movies() {
   const allMovies = useSelector(state => state.allMovies);
@@ -53,11 +54,16 @@ function Movies() {
     kazetachinu20,
     marnie21
   };
+  const dispatch = useDispatch();
+
+  function movieSelected(id){
+    dispatch(selectMovie())
+  }
 
   return (
     <div className="App">
       {allMovies.map(movie => {
-        return <img src={image[movie.img]} key="movie.id" />;
+        return <img src={image[movie.img]} key="movie.id" onClick={(e)=> movieSelected(movie)}/>;
       })}
     </div>
   );

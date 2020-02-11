@@ -1,5 +1,5 @@
 const Ghibli = [
-  {
+  { 
     title: "When Marnie Was There",
     content:
       "2014 Hiromasa Yonebayashi	Hiromasa Yonebayashi, Keiko Niwa & Masashi Ando	Yoshiaki Nishimura & Toshio Suzuki	Takatsugu Muramatsu      anime drama family mistery",

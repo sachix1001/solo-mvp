@@ -13,6 +13,8 @@ app.use(
   )
 );
 
+
+
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
