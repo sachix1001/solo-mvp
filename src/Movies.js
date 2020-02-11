@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 // import { setAllMovies, selectMovie, allExceptSelected } from "./redux/redux";
-import { useSelector , useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 // import axios from "axios";
 import {
   naushika1,
@@ -26,10 +26,11 @@ import {
   kazetachinu20,
   marnie21
 } from "./images/index";
-import { selectMovie, setAllExceptSelected} from "./redux/redux";
+import { selectMovie, setAllExceptSelected } from "./redux/redux";
 
 function Movies() {
   const allMovies = useSelector(state => state.allMovies);
+  const selected = useSelector(state => state.selected);
   const allExceptSelected = useSelector(state => state.allExceptSelected);
   // const dispatch = useDispatch();
   const image = {
@@ -56,15 +57,32 @@ function Movies() {
     marnie21
   };
   const dispatch = useDispatch();
-console.log('allExceptSelected',allExceptSelected)
-  function movieSelected(id){
-    dispatch(selectMovie())
+
+  function movieSelected(movie) {
+    dispatch(selectMovie(movie));
+    const exceptSelected = allMovies.filter(elem=>
+      elem.id !== movie.id)
+    dispatch(setAllExceptSelected(exceptSelected))
   }
+
+    useEffect(()=>{
+    console.log('selected',selected)
+  },[selected])
+
+    useEffect(()=>{
+    console.log('allExceptSelected',allExceptSelected)
+  },[allExceptSelected])
 
   return (
     <div className="App">
       {allExceptSelected.map(movie => {
-        return <img src={image[movie.img]} key={movie.id} onClick={(e)=> movieSelected(movie)}/>;
+        return (
+          <img
+            src={image[movie.img]}
+            key={movie.id}
+            onClick={e => movieSelected(movie)}
+          />
+        );
       })}
     </div>
   );

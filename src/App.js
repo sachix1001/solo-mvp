@@ -7,8 +7,8 @@ import Movies from './Movies'
 import data from './data';
 
 function App() {
-  const allMovies = useSelector(state => state.allMovies);
-  const allExceptSelected = useSelector(state => state.allExceptSelected);
+  // const allMovies = useSelector(state => state.allMovies);
+  // const allExceptSelected = useSelector(state => state.allExceptSelected);
   const dispatch = useDispatch();
   
   dispatch(setAllMovies(data.Ghibli))
