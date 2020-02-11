@@ -108,7 +108,7 @@ function Movies() {
   
       <div className="container">
         {selected ? (
-          <div className='favorite-movie-card'>
+          <div className='favorite-movie-card memox'>
             {/* <img src={frame} className='frame' alt='frame'/> */}
             <h3 id="title" className='ranking'>Select Your Favorite Movie</h3>
             <img className="movie-img" id='favorite' src={image[selected.img]} />
