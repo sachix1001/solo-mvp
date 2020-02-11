@@ -18,10 +18,10 @@ export const selectMovie = movie => {
     movie
   };
 };
-export const allExceptSelected = movie => {
+export const setAllExceptSelected = movies => {
   return {
     type: "CREATE_EXCEPTSELECTED",
-    movie
+    movies
   };
 };
 
@@ -35,10 +35,10 @@ const reducer = (state = initialState, action) => {
       return { ...state, selected: action.movie };
     }
     case "CREATE_EXCEPTSELECTED": {
-      const allExceptSelected = state.allMovies.filter(
-        movie => movie.id !== action.movies.id
-      );
-      return { ...state, allExceptSelected: allExceptSelected };
+      // const allExceptSelected = state.allMovies.filter(
+      //   movie => movie.id !== action.movies.id
+      // );
+      return { ...state, allExceptSelected: action.movies };
     }
   }
   return state;
