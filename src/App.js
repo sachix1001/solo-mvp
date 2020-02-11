@@ -11,8 +11,8 @@ function App() {
   // const allExceptSelected = useSelector(state => state.allExceptSelected);
   const dispatch = useDispatch();
   
-  dispatch(setAllMovies(data.Ghibli))
-  dispatch(setAllExceptSelected(data.Ghibli))
+  // dispatch(setAllMovies(data.Ghibli))
+  // dispatch(setAllExceptSelected(data.Ghibli))
 
   useEffect(() => {
     axios.get("/api/movies").then(res => {
