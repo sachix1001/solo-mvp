@@ -10,7 +10,7 @@ function App() {
   const allMovies = useSelector(state => state.allMovies);
   const dispatch = useDispatch();
   
-  // dispatch(setAllMovies(data.Ghibli))
+  dispatch(setAllMovies(data.Ghibli))
 
   useEffect(() => {
     axios.get("/api/movies").then(res => {

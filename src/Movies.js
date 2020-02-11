@@ -63,7 +63,7 @@ function Movies() {
   return (
     <div className="App">
       {allMovies.map(movie => {
-        return <img src={image[movie.img]} key="movie.id" onClick={(e)=> movieSelected(movie)}/>;
+        return <img src={image[movie.img]} key={movie.id} onClick={(e)=> movieSelected(movie)}/>;
       })}
     </div>
   );
