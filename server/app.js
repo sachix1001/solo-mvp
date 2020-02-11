@@ -16,7 +16,7 @@ app.use(
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
-app.get("/api/movies", async (req, res) => {
+app.get("//api/movies", async (req, res) => {
   try {
     const movies = await db.select().table("movies");
     res.json(movies);
