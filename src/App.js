@@ -14,6 +14,7 @@ function App() {
   // dispatch(setAllMovies(data.Ghibli))
   // dispatch(setAllExceptSelected(data.Ghibli))
   
+
   useEffect(() => {
     axios.get("/api/movies").then(res => {
       dispatch(setAllMovies(res.data));
