@@ -27,6 +27,7 @@ import {
   marnie21
 } from "./images/index";
 import { selectMovie, setAllExceptSelected } from "./redux/redux";
+import ContentBasedRecommender from "content-based-recommender";
 
 function Movies() {
   const allMovies = useSelector(state => state.allMovies);
@@ -57,24 +58,42 @@ function Movies() {
     marnie21
   };
   const dispatch = useDispatch();
+  const recommender = new ContentBasedRecommender({
+    minScore: 0,
+    maxSimilarDocuments: 100
+  });
+
+  const filtered = allMovies.map(movie => {
+    return { id: movie.id, content: movie.content };
+  });
+  recommender.train(filtered);
+
+  //get top 10 similar items to document 1000002
+  const similarDocuments = recommender.getSimilarDocuments("1", 0, 10);
+
+  console.log("similarDocuments", similarDocuments);
 
   function movieSelected(movie) {
     dispatch(selectMovie(movie));
-    const exceptSelected = allMovies.filter(elem=>
-      elem.id !== movie.id)
-    dispatch(setAllExceptSelected(exceptSelected))
+    const exceptSelected = allMovies.filter(elem => elem.id !== movie.id);
+    dispatch(setAllExceptSelected(exceptSelected));
   }
 
     useEffect(()=>{
-    console.log('selected',selected)
+    
   },[selected])
 
-    useEffect(()=>{
-    console.log('allExceptSelected',allExceptSelected)
-  },[allExceptSelected])
+  //   useEffect(()=>{
+  //   console.log('allExceptSelected',allExceptSelected)
+  // },[allExceptSelected])
 
   return (
     <div className="App">
+      {selected ? (
+        <div>
+          <img src={image[selected.img]} />
+        </div>
+      ) : null}
       {allExceptSelected.map(movie => {
         return (
           <img
