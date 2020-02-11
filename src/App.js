@@ -5,14 +5,15 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import Movies from './Movies'
 import data from './data';
+import totoro from './images/totoro_bottom.png'
 
 function App() {
   // const selected = useSelector(state => state.selected);
   // const allExceptSelected = useSelector(state => state.allExceptSelected);
   const dispatch = useDispatch();
   
-  // dispatch(setAllMovies(data.Ghibli))
-  // dispatch(setAllExceptSelected(data.Ghibli))
+  dispatch(setAllMovies(data.Ghibli))
+  dispatch(setAllExceptSelected(data.Ghibli))
   
 
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
   return (
     <div className="App">
       <Movies></Movies>
+      {/* <img src={totoro} alt='totoro'/> */}
     </div>
   );
 }
