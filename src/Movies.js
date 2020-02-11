@@ -64,9 +64,9 @@ function Movies() {
 
   function movieSelected(movie) {
     dispatch(selectMovie(movie));
-    console.log('allMovies',allMovies)
-    console.log('selected',selected)
-    console.log('allExceptSelected',allExceptSelected)
+    console.log("allMovies", allMovies);
+    console.log("selected", selected);
+    console.log("allExceptSelected", allExceptSelected);
     const exceptSelected = allMovies.filter(elem => elem.id !== movie.id);
     dispatch(setAllExceptSelected(exceptSelected));
   }
@@ -105,21 +105,28 @@ function Movies() {
 
   return (
     <div className="App">
-      <h2 id='title'>Select Your Favorite Ghibli Movie</h2>
-      {selected ? (
-        <div>
-          <img className='movieImg' src={image[selected.img]} />
-        </div>
-      ) : null}
-      {allExceptSelected.map(movie => {
-        return (
-          <img className='movieImg'
-            src={image[movie.img]}
-            key={movie.id}
-            onClick={e => movieSelected(movie)}
-          />
-        );
-      })}
+      <h2 id="title">Select Your Favorite Ghibli Movie</h2>
+      <div className="container">
+        {selected ? (
+          <div className='movie-card'>
+            <div className="ranking">favorite</div>
+            <img className="movieImg" src={image[selected.img]} />
+          </div>
+        ) : null}
+        {allExceptSelected.map((movie, i) => {
+          return (
+            <div className="movie-card">
+              <div className="ranking">{i+1}</div>
+              <img
+                className="movieImg"
+                src={image[movie.img]}
+                key={movie.id}
+                onClick={e => movieSelected(movie)}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
