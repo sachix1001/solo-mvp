@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import Movies from './Movies'
 import data from './data';
-import totoro from './images/totoro_bottom.png'
+import totoro from './images/53983810.png'
 
 function App() {
   // const selected = useSelector(state => state.selected);
@@ -29,8 +29,8 @@ function App() {
 
   return (
     <div className="App">
+      <img id='totoro'src={totoro} alt='totoro'/>
       <Movies></Movies>
-      {/* <img src={totoro} alt='totoro'/> */}
     </div>
   );
 }

@@ -105,14 +105,15 @@ function Movies() {
 
   return (
     <div className="App">
+      <h2 id='title'>Select Your Favorite Ghibli Movie</h2>
       {selected ? (
         <div>
-          <img src={image[selected.img]} />
+          <img className='movieImg' src={image[selected.img]} />
         </div>
       ) : null}
       {allExceptSelected.map(movie => {
         return (
-          <img
+          <img className='movieImg'
             src={image[movie.img]}
             key={movie.id}
             onClick={e => movieSelected(movie)}

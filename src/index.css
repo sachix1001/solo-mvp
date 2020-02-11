@@ -10,6 +10,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./images/totoro_bottom.png");
   background-size: 100% 170%;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
 }
 
 code {
@@ -17,7 +20,18 @@ code {
     monospace;
 }
 
-img {
-  width: 170px;
-  height: 230px;
+#totoro{
+  width: 130px;
+  position: absolute;
+    right: 10px;
+    margin: 3%;
 }
+.movieImg {
+  width: 7em;
+  height: 11em;;
+}
+
+#title{
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
