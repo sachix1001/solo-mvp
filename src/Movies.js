@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./App.css";
-// import { setAllMovies, selectMovie, allExceptSelected } from "./redux/redux";
 import { useSelector, useDispatch } from "react-redux";
 // import axios from "axios";
 import {
@@ -63,29 +62,43 @@ function Movies() {
     maxSimilarDocuments: 100
   });
 
-  const filtered = allMovies.map(movie => {
-    return { id: movie.id, content: movie.content };
-  });
-  recommender.train(filtered);
-
-  //get top 10 similar items to document 1000002
-  const similarDocuments = recommender.getSimilarDocuments("1", 0, 10);
-
-  console.log("similarDocuments", similarDocuments);
-
   function movieSelected(movie) {
     dispatch(selectMovie(movie));
     const exceptSelected = allMovies.filter(elem => elem.id !== movie.id);
     dispatch(setAllExceptSelected(exceptSelected));
   }
 
-    useEffect(()=>{
-    
-  },[selected])
+  // create recommendation
+  useEffect(() => {
+    // filter not needed info
+    const filtered = allMovies.map(movie => {
+      return { id: movie.id, content: movie.content };
+    });
+    // train
+    recommender.train(filtered);
 
-  //   useEffect(()=>{
-  //   console.log('allExceptSelected',allExceptSelected)
-  // },[allExceptSelected])
+    //get top 10 similar items to document 1000002
+    const similarDocuments = recommender.getSimilarDocuments(
+      selected.id,
+      0,
+      10
+    );
+    // order exceptedList
+    if (Object.keys(selected).length !== 0) {
+      const orderedMovies = [];
+      similarDocuments.forEach(ranking => {
+        const pick = allExceptSelected.find(movie => movie.id === ranking.id);
+        orderedMovies.push(pick);
+      });
+      console.log("orderedMovies", orderedMovies);
+      dispatch(setAllExceptSelected(orderedMovies));
+    }
+    // setOrder(orderedMovies)
+  }, [selected]);
+
+  // useEffect(() => {
+  //   console.log("selected", selected);
+  // }, [selected]);
 
   return (
     <div className="App">

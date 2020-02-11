@@ -7,7 +7,7 @@ import Movies from './Movies'
 import data from './data';
 
 function App() {
-  // const allMovies = useSelector(state => state.allMovies);
+  // const selected = useSelector(state => state.selected);
   // const allExceptSelected = useSelector(state => state.allExceptSelected);
   const dispatch = useDispatch();
   
@@ -20,9 +20,6 @@ function App() {
     });
   }, [dispatch]);
 
-  // useEffect(()=>{
-  //   console.log('allMovies',allMovies)
-  // },[allMovies])
   // useEffect(()=>{
   //   console.log('allExceptSelected',allExceptSelected)
   // },[allExceptSelected])
