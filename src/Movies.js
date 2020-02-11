@@ -84,7 +84,7 @@ function Movies() {
     const similarDocuments = recommender.getSimilarDocuments(
       selected.id,
       0,
-      10
+      100
     );
     // order exceptedList
     if (Object.keys(selected).length !== 0) {
