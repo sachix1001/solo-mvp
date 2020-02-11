@@ -26,10 +26,11 @@ import {
   kazetachinu20,
   marnie21
 } from "./images/index";
-import { selectMovie, allExceptSelected} from "./redux/redux";
+import { selectMovie, setAllExceptSelected} from "./redux/redux";
 
 function Movies() {
   const allMovies = useSelector(state => state.allMovies);
+  const allExceptSelected = useSelector(state => state.allExceptSelected);
   // const dispatch = useDispatch();
   const image = {
     naushika1,
@@ -55,14 +56,14 @@ function Movies() {
     marnie21
   };
   const dispatch = useDispatch();
-
+console.log('allExceptSelected',allExceptSelected)
   function movieSelected(id){
     dispatch(selectMovie())
   }
 
   return (
     <div className="App">
-      {allMovies.map(movie => {
+      {allExceptSelected.map(movie => {
         return <img src={image[movie.img]} key={movie.id} onClick={(e)=> movieSelected(movie)}/>;
       })}
     </div>
