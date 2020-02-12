@@ -8,8 +8,6 @@ import data from "./data";
 import totoro from "./images/53983810.png";
 
 function App() {
-  // const selected = useSelector(state => state.selected);
-  // const allExceptSelected = useSelector(state => state.allExceptSelected);
   const dispatch = useDispatch();
 
   dispatch(setAllMovies(data.Ghibli));
@@ -22,9 +20,8 @@ function App() {
     });
   }, [dispatch]);
 
-  // useEffect(()=>{
-  //   console.log('allExceptSelected',allExceptSelected)
-  // },[allExceptSelected])
+//   const totoro = document.getElementById('#totoro');
+// console.log(totoro)
 
   return (
     <div className="App">

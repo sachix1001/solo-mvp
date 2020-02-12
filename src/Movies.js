@@ -105,19 +105,28 @@ function Movies() {
 
   return (
     <div className="App">
-  
       <div className="container">
         {selected ? (
-          <div className='favorite-movie-card memox'>
+          <div className="favorite-movie-card memox">
             {/* <img src={frame} className='frame' alt='frame'/> */}
-            <h3 id="title" className='ranking'>Select Your Favorite Movie</h3>
-            <img className="movie-img" id='favorite' src={image[selected.img]} />
+            <h3 className="ranking" id='select'>
+              Select Your Favorite Movie
+            </h3>
+            <img
+              className="movie-img"
+              id="favorite"
+              src={image[selected.img]}
+            />
           </div>
         ) : null}
+        <div className="place-holder">
+        </div>
+        <div className="movie-card">
+        </div>
         {allExceptSelected.map((movie, i) => {
           return (
             <div className="movie-card">
-              <div className="ranking">{i+1}</div>
+              <div className="ranking">{i + 1}</div>
               <img
                 className="movie-img"
                 src={image[movie.img]}

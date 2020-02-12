@@ -1,5 +1,5 @@
 // Update with your config settings.
-require("dotenv").config();
+// require("dotenv").config();
 //Fixing bug
 
 module.exports = {
@@ -10,9 +10,9 @@ module.exports = {
   searchPath: "public",
   pool: {
     min: 2,
-    max: 10,
+    max: 10
   },
   migrations: {
-    tableName: "knex_migrations",
-  },
+    tableName: "knex_migrations"
+  }
 };
