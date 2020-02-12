@@ -142,7 +142,7 @@ nav {
   position: absolute;
   right: 70px;
   top: 48px;
-  animation: pulse 30s infinite ,walk 1s infinite;
+  animation: pulse 15s infinite, walk 1s infinite;
   top: 69px;
 }
 
@@ -151,33 +151,36 @@ nav {
     right: 0%;
   }
   25% {
-    right: 25%;
+    right: 20%;
   }
   50% {
-    right: 50%;
+    right: 40%;
+    transform: scale(-1, 1);
   }
   75% {
-    right: 75%;
+    right: 50%;
+    transform: scale(-1, 1);
   }
   to {
-    right: 100%;
+    right: 78%;
+    transform: scale(-1, 1);
   }
 }
 
 @keyframes walk {
   from {
-    transform: translate(0px, 0px) rotateZ(0deg)
+    transform: translate(0px, 0px) rotateZ(0deg);
   }
   25% {
-    transform: translate(2px, 2px) rotateZ(5deg)
+    transform: translate(2px, 2px) rotateZ(5deg);
   }
   50% {
-    transform: translate(0px, 2px) rotateZ(0deg)
+    transform: translate(0px, 2px) rotateZ(0deg);
   }
   75% {
-    transform: translate(2px, 0px) rotateZ(-5deg)
+    transform: translate(2px, 0px) rotateZ(-5deg);
   }
   to {
-    transform: translate(0px, 0px) rotateZ(0deg)
+    transform: translate(0px, 0px) rotateZ(0deg);
   }
 }
