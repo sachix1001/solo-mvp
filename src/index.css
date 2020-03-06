@@ -10,8 +10,9 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("./images/totoro_bottom.png");
+  
   background-size: 100% 170%;
+  background-color: #f2e8c1;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom;
@@ -76,6 +77,9 @@ z-index: 7;
 }
 
 @media only screen and (min-width: 600px) {
+  /* body{
+    background-image: url("./images/totoro_bottom.png");
+  } */
   .wrapper {
     margin-top: 120px;
   }
