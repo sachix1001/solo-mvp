@@ -20,9 +20,6 @@ function App() {
     });
   }, [dispatch]);
 
-//   const totoro = document.getElementById('#totoro');
-// console.log(totoro)
-
   return (
     <div className="App">
       <nav>

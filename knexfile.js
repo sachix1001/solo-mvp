@@ -1,7 +1,3 @@
-// Update with your config settings.
-// require("dotenv").config();
-//Fixing bug
-
 module.exports = {
   client: "pg",
   connection:

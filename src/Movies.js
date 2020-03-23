@@ -32,7 +32,6 @@ function Movies() {
   const allMovies = useSelector(state => state.allMovies);
   const selected = useSelector(state => state.selected);
   const allExceptSelected = useSelector(state => state.allExceptSelected);
-  // const dispatch = useDispatch();
   const image = {
     naushika1,
     rapyuta2,
@@ -96,12 +95,7 @@ function Movies() {
       console.log("orderedMovies", orderedMovies);
       dispatch(setAllExceptSelected(orderedMovies));
     }
-    // setOrder(orderedMovies)
   }, [selected]);
-
-  // useEffect(() => {
-  //   console.log("selected", selected);
-  // }, [selected]);
 
   return (
     <div className="App">
