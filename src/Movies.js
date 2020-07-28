@@ -77,7 +77,7 @@ function Movies() {
       return { id: movie.id, content: movie.content };
     });
     // train
-    // recommender.train(filtered);
+    recommender.train(filtered);
 
     //get top 10 similar items to document 1000002
     const similarDocuments = recommender.getSimilarDocuments(
