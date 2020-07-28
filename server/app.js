@@ -13,8 +13,6 @@ app.use(
   )
 );
 
-
-
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
@@ -28,15 +26,16 @@ app.get("/api/movies", async (req, res) => {
   }
 });
 
-app.post('/upbank', async(req, res) => {
-  try{
-    console.log(req)
+app.post("/upbank", async (req, res) => {
+  try {
+    console.log(req);
+    console.log('request received!');
     res.sendStatus(200);
-  } catch (err){
+  } catch (err) {
     console.error("Error loading locations!", err);
     res.sendStatus(500);
   }
-})
+});
 
 // Always return the main index.html, so react-router render the route in the client
 app.get("*", (req, res) => {
