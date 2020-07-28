@@ -26,6 +26,7 @@ app.get("/api/movies", async (req, res) => {
   }
 });
 
+
 app.post("/upbank", async (req, res) => {
   try {
     console.log(req);
