@@ -28,6 +28,16 @@ app.get("/api/movies", async (req, res) => {
   }
 });
 
+app.post('/upbank', async(req, res) => {
+  try{
+    console.log(req)
+    res.sendStatus(200);
+  } catch (err){
+    console.error("Error loading locations!", err);
+    res.sendStatus(500);
+  }
+})
+
 // Always return the main index.html, so react-router render the route in the client
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));

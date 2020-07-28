@@ -2,7 +2,7 @@ const app = require("./app");
 const db = require("./knex");
 
 const PORT = process.env.PORT || 9000;
-
+console.log(PORT);
 (async () => {
   try {
     console.log("Running migrations...");
