@@ -13,6 +13,14 @@ when you select your favourite Ghibli movie, it reorders all movies by recommend
 A recommendation will be made based on content-based recommender system. It recommends close feature movies.
 https://www.npmjs.com/package/content-based-recommender
 
+### Tech used
+- React
+- Redux
+- Express
+- Node
+- Postgres
+- Heroku
+
 ## 
 
 ## Installing Dependencies and Starting Up
