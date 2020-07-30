@@ -2,7 +2,7 @@ This was created during my time as a student at Code Chrysalis. as a Solo MVP Pr
 
 ## Ghibli Movie Recommendation
 
-<img src="https://github.com/sachix1001/Totoro-solo-mvp/blob/master/ReactApp.gif"  />
+<img src="https://github.com/sachix1001/Totoro-solo-mvp/blob/master/React-App.gif"  />
 
 ### what is this?
 This is Ghibli movie recommendation app.
