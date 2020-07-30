@@ -7,7 +7,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
-    "content-based-recommender": "^1.4.0",
+    "content-based-recommender": "https://github.com/sachix1001/content-based-recommender.git",
     "dotenv": "^8.2.0",
     "env": "^0.0.2",
     "knex": "^0.20.9",
