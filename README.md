@@ -13,6 +13,15 @@ when you select your favourite Ghibli movie, it reorders all movies by recommend
 A recommendation will be made based on content-based recommender system. It recommends close feature movies.
 https://www.npmjs.com/package/content-based-recommender
 
+### Tech used
+- React (https://github.com/facebook/create-react-app)
+- Redux
+- Material-UI (https://material-ui.com/)
+- Express
+- Node
+- Postgres
+- Heroku
+
 ## 
 
 ## Installing Dependencies and Starting Up
@@ -41,10 +50,4 @@ To run the app in development mode with hot-reloading:
 yarn start
 ```
 
-Technology Used
-React (create-react-app) (https://github.com/facebook/create-react-app)
-react-webcam: (https://www.npmjs.com/package/react-webcam)
-ml5.js (https://ml5js.org/)
-Material-UI (https://material-ui.com/)
-Heroku (https://dashboard.heroku.com/)
 
