@@ -7,10 +7,11 @@ See it deployed  [here 👈](https://solo-mvp-sachi.herokuapp.com/).
 
 ### what is this?
 This is Ghibli movie recommendation app.
-when you select your favorite Ghibli movie, it reorder all movies by recommendation. 
+when you select your favourite Ghibli movie, it reorders all movies by recommendation. 
 
 ### what is the logic?
-Recommendation will be made based on content-based recommender system. It recommends close feature movies.
+A recommendation will be made based on content-based recommender system. It recommends close feature movies.
+https://www.npmjs.com/package/content-based-recommender
 
 ## 
 
@@ -22,12 +23,12 @@ First, install the dependencies for this project:
 yarn start
 ```
 
-create database called movie
+create a database called movie
 ```
 CREATE DATABASE movie
 ```
 
-Create table in your database
+Create a table in your database
 ```
 yarn knex migrate:latest
 ```
