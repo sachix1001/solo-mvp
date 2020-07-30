@@ -14,8 +14,9 @@ A recommendation will be made based on content-based recommender system. It reco
 https://www.npmjs.com/package/content-based-recommender
 
 ### Tech used
-- React
+- React (https://github.com/facebook/create-react-app)
 - Redux
+- Material-UI (https://material-ui.com/)
 - Express
 - Node
 - Postgres
@@ -49,10 +50,4 @@ To run the app in development mode with hot-reloading:
 yarn start
 ```
 
-Technology Used
-React (create-react-app) (https://github.com/facebook/create-react-app)
-react-webcam: (https://www.npmjs.com/package/react-webcam)
-ml5.js (https://ml5js.org/)
-Material-UI (https://material-ui.com/)
-Heroku (https://dashboard.heroku.com/)
 
