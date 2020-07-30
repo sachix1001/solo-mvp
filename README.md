@@ -2,8 +2,6 @@ This was created during my time as a student at Code Chrysalis. as a Solo MVP Pr
 
 ## Ghibli Movie Recommendation
 
-
-See it deployed  [here 👈](https://solo-mvp-sachi.herokuapp.com/).
 <img src="https://github.com/sachix1001/Totoro-solo-mvp/blob/master/ReactApp.gif"  />
 
 ### what is this?
