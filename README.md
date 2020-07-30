@@ -4,7 +4,7 @@ This was created during my time as a student at Code Chrysalis. as a Solo MVP Pr
 
 
 See it deployed  [here 👈](https://solo-mvp-sachi.herokuapp.com/).
-<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="40" height="40" />
+<imhttps://github.com/sachix1001/Totoro-solo-mvp/blob/master/ReactApp.gif" width="150"  />
 
 ### what is this?
 This is Ghibli movie recommendation app.
